@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   border-bottom: 1px solid lightgrey;
   font-family: Arial, Helvetica, sans-serif;
 
+  .information {
+    width: 12rem;
+  }
+
   .price,
   .buttons {
     display: flex;
