@@ -1,9 +1,9 @@
 // components
-import CartItem from '../CartItem/CartItem';
-// types
-import { CartItemType } from '../App';
+import CartItem from '../CartItem';
 // styles
 import { Wrapper } from './Cart.styles';
+// types
+import { CartItemType } from '../types/CartItemType';
 
 type Props = {
   cartItems: CartItemType[];
@@ -14,6 +14,7 @@ type Props = {
 const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
   const calculateTotal = (items: CartItemType[]) =>
     items.reduce((acc: number, item) => acc + item.amount * item.price, 0);
+
   return (
     <Wrapper>
       <h1>Your Shopping Cart</h1>
@@ -26,7 +27,7 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
           removeFromCart={removeFromCart}
         />
       ))}
-      <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+      <h3>Total: ${calculateTotal(cartItems).toFixed(2)}</h3>
     </Wrapper>
   );
 };

@@ -1,27 +1,30 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  min-width: 15rem;
   height: 100%;
-  border: 1px solid lightblue;
-  border-radius: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 1.5rem;
 
   img {
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-  }
-
-  Button {
-    border-radius: 0 0 20px 20px;
+    height: 15rem;
+    padding: 1rem;
+    object-fit: contain;
   }
 
   div {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
     height: 100%;
+    padding: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
   }
 `;
